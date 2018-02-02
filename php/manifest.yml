@@ -1,0 +1,12 @@
+---
+declared-services:
+  ClearDB Managed MySQL Database-tc:
+    label: cleardb
+    plan: cb5
+applications:
+- disk_quota: 256M
+  name: toolchainphp
+  instances: 1
+  memory: 256M
+  services:
+    - ClearDB Managed MySQL Database-tc
